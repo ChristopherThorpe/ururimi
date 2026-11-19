@@ -1,0 +1,35 @@
+{
+  "id": "rn.word.inzu",
+  "kind": "word",
+  "text": "inzu",
+  "glosses": {
+    "en": "house",
+    "fr": "maison"
+  },
+  "image": {
+    "file": "media/images/house.svg",
+    "provenance": {
+      "source": "Drawn for the Ururimi project",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "audio": [
+    {
+      "kind": "synthetic",
+      "file": "media/audio/rn.word.inzu.tts.wav",
+      "voice": "facebook/mms-tts-run",
+      "provenance": {
+        "source": "Synthesised with Meta MMS-TTS by tools/placeholder-audio/generate.py; placeholder until a speaker records it",
+        "license": "CC-BY-NC-4.0",
+        "url": "https://huggingface.co/facebook/mms-tts-run"
+      }
+    }
+  ],
+  "provenance": {
+    "source": "Drafted with an AI assistant from general knowledge; awaiting review by a Kirundi speaker",
+    "license": "CC-BY-4.0"
+  },
+  "review": {
+    "status": "unreviewed"
+  }
+}

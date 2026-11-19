@@ -1,0 +1,36 @@
+{
+  "id": "eo.word.suno",
+  "kind": "word",
+  "text": "suno",
+  "glosses": {
+    "en": "sun",
+    "fr": "soleil"
+  },
+  "image": {
+    "file": "media/images/sun.svg",
+    "provenance": {
+      "source": "Drawn for the Ururimi project",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "audio": [
+    {
+      "kind": "synthetic",
+      "file": "media/audio/eo.word.suno.tone.wav",
+      "voice": "sine-tone",
+      "provenance": {
+        "source": "Generated sine tone; stands in for speech in the test fixture",
+        "license": "CC0-1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "source": "Test fixture written for the Ururimi project",
+    "license": "CC0-1.0"
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewer": "fixture",
+    "date": "2026-11-17"
+  }
+}
