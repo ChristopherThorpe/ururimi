@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Lesson } from "./Lesson.js";
 import {
   availableLocales,
@@ -9,6 +9,10 @@ import {
   type Strings,
 } from "./locale.js";
 import { loadPack, type LoadedPack } from "./pack.js";
+import { Link, useLocation } from "./router.js";
+
+// Loaded only when /studio is visited, so learners never download it.
+const Studio = lazy(() => import("./Studio.js"));
 
 type Status =
   | { state: "loading" }
@@ -21,10 +25,11 @@ export function App() {
   const strings: Strings = LOCALES[locale].strings;
 
   const [attempt, setAttempt] = useState(0);
+  const { path, pack: requestedPack } = useLocation();
 
   useEffect(() => {
     let cancelled = false;
-    loadPack().then(
+    loadPack(requestedPack).then(
       (loaded) => {
         if (cancelled) return;
         const locales = availableLocales(loaded.pack.supportLocales);
@@ -40,7 +45,7 @@ export function App() {
     return () => {
       cancelled = true;
     };
-  }, [attempt]);
+  }, [attempt, requestedPack]);
 
   const retry = () => {
     setStatus({ state: "loading" });
@@ -77,6 +82,44 @@ export function App() {
 
   const { loaded, locales } = status;
   const lesson = loaded.pack.lessons[0];
+  const routes = [
+    { to: "/", label: strings.navLesson },
+    { to: "/studio", label: strings.navStudio },
+  ];
+
+  let page;
+  if (path === "/studio") {
+    page = (
+      <Suspense
+        fallback={
+          <main className="shell--centered">
+            <p className="muted">{strings.loading}</p>
+          </main>
+        }
+      >
+        <Studio strings={strings} />
+      </Suspense>
+    );
+  } else if (path !== "/") {
+    page = (
+      <main className="shell--centered">
+        <p>{strings.notFound}</p>
+        <Link to="/" className="button">
+          {strings.backToLesson}
+        </Link>
+      </main>
+    );
+  } else if (lesson) {
+    page = (
+      <Lesson key={lesson.id} loaded={loaded} lesson={lesson} locale={locale} strings={strings} />
+    );
+  } else {
+    page = (
+      <main className="shell--centered">
+        <p>{strings.empty}</p>
+      </main>
+    );
+  }
 
   return (
     <div className="shell">
@@ -100,13 +143,19 @@ export function App() {
           </div>
         )}
       </header>
-      {lesson ? (
-        <Lesson key={lesson.id} loaded={loaded} lesson={lesson} locale={locale} strings={strings} />
-      ) : (
-        <main className="shell--centered">
-          <p>{strings.empty}</p>
-        </main>
-      )}
+      <nav className="nav" aria-label={strings.navLabel}>
+        {routes.map(({ to, label }) => (
+          <Link
+            key={to}
+            to={to}
+            className="nav__link"
+            aria-current={to === path ? "page" : undefined}
+          >
+            {label}
+          </Link>
+        ))}
+      </nav>
+      {page}
     </div>
   );
 }

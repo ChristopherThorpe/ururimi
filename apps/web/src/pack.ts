@@ -18,13 +18,12 @@ async function fetchJson(url: string): Promise<unknown> {
 }
 
 /**
- * Load the language pack to teach: the one named by `?pack=` when it exists,
- * otherwise the deployment's default.
+ * Load the language pack to teach: the one requested (from `?pack=`) when it
+ * exists, otherwise the deployment's default.
  */
-export async function loadPack(): Promise<LoadedPack> {
+export async function loadPack(requested: string | null): Promise<LoadedPack> {
   const base = `${import.meta.env.BASE_URL}packs/`;
   const index = (await fetchJson(`${base}index.json`)) as PackIndex;
-  const requested = new URLSearchParams(window.location.search).get("pack");
   const id = index.packs.some((entry) => entry.id === requested) ? requested : index.defaultPack;
 
   const parsed = parsePack(await fetchJson(`${base}${id}/pack.json`));
