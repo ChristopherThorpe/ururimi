@@ -13,6 +13,19 @@ already made; do not reopen a decision without a new decision record.
 - `pnpm format` — fix formatting.
 - `pnpm content:check --commercial` — list assets that block commercial use.
 
+## Pack layout
+
+A pack is a directory, `content/packs/<id>/`:
+
+- `pack.json` — schema version, id, language, support locales. No items.
+- `items/<item-id>.json` — one item per file; the file name must equal the item's id.
+- `lessons/<lesson-id>.json` — one lesson per file, named the same way.
+- `media/` — images and audio.
+
+`tools/packs.ts` assembles these into a `Pack` (items and lessons sorted by id) and reports
+errors by file. `pnpm packs:build` writes one combined `pack.json` per pack for the web app.
+See `docs/adr/0004-one-file-per-item.md`.
+
 ## Rules that are enforced
 
 1. **Nothing language-specific in code.** Everything about a target language lives in

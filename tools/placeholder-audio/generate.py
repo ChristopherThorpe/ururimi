@@ -9,9 +9,9 @@ is CC-BY-NC-4.0, so its clips keep the pack non-commercial until replaced.
 Usage:
     python generate.py --pack content/packs/rn --model facebook/mms-tts-run
 
-Only items whose id is passed with --item, or (by default) every item that
-has no clip of kind "human", are synthesised. Existing files are kept unless
---force is given.
+Items are read from the pack's `items/<item-id>.json` files. Only items whose
+id is passed with --item, or (by default) every item that has no clip of kind
+"human", are synthesised. Existing files are kept unless --force is given.
 """
 
 from __future__ import annotations
@@ -21,6 +21,17 @@ import json
 import sys
 import wave
 from pathlib import Path
+
+
+def load_items(pack_dir: Path) -> list[dict]:
+    """Read the pack's items from `items/<item-id>.json`, sorted by file name."""
+    items_dir = pack_dir / "items"
+    if not items_dir.is_dir():
+        raise SystemExit(f"{items_dir} is missing: is --pack a pack directory?")
+    return [
+        json.loads(path.read_text(encoding="utf-8"))
+        for path in sorted(items_dir.glob("*.json"))
+    ]
 
 
 def write_wav(path: Path, samples, sample_rate: int) -> None:
@@ -48,11 +59,10 @@ def main() -> int:
     import torch
     from transformers import AutoTokenizer, VitsModel
 
-    pack = json.loads((args.pack / "pack.json").read_text(encoding="utf-8"))
     wanted = set(args.item)
     items = [
         item
-        for item in pack["items"]
+        for item in load_items(args.pack)
         if (item["id"] in wanted)
         or (not wanted and not any(clip["kind"] == "human" for clip in item["audio"]))
     ]

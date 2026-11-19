@@ -59,6 +59,23 @@ pnpm e2e
 | `tools`                    | Content checks, the pack build, placeholder speech generation.     |
 | `docs`                     | The plan, decision records, and the survey of Kirundi resources.   |
 
+## Language packs
+
+A pack is a directory in `content/packs/`, one small file per item so that reviews and
+recordings arrive as small changes:
+
+```text
+content/packs/<id>/
+  pack.json              identity, language, support locales
+  items/<item-id>.json   one word, phrase or sentence, with its glosses, audio and licences
+  lessons/<lesson-id>.json
+  media/                 images and audio
+```
+
+A file's name must match the id inside it. `pnpm content:check` assembles each pack and names
+the file behind any problem; `pnpm build` combines each pack into the single file the web app
+loads. See [docs/adr/0004-one-file-per-item.md](docs/adr/0004-one-file-per-item.md).
+
 ## Licences
 
 Code is licensed under [Apache-2.0](LICENSE). Language content is licensed per item, as recorded
