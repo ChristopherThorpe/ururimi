@@ -14,6 +14,7 @@
     "preview": "pnpm --filter @ururimi/web preview",
     "packs:build": "tsx tools/build-packs.ts",
     "content:check": "tsx tools/check-content.ts",
+    "audio:normalise": "tsx tools/normalise-audio/cli.ts",
     "typecheck": "tsc -p packages/content-schema && tsc -p packages/engine && tsc -p apps/web && tsc -p tools",
     "lint": "eslint .",
     "format": "prettier --write .",
