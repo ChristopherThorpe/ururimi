@@ -74,7 +74,7 @@ content/packs/<id>/
 
 A file's name must match the id inside it. `pnpm content:check` assembles each pack and names
 the file behind any problem; `pnpm build` combines each pack into the single file the web app
-loads. See [docs/adr/0004-one-file-per-item.md](docs/adr/0004-one-file-per-item.md).
+loads. See [docs/adr/0006-one-file-per-item.md](docs/adr/0006-one-file-per-item.md).
 
 ## Licences
 

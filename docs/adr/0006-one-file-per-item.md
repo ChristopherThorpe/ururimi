@@ -1,4 +1,4 @@
-# 4. A pack stores one file per item and per lesson
+# 6. A pack stores one file per item and per lesson
 
 Date: 2026-11-19. Status: accepted.
 

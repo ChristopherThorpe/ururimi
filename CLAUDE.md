@@ -24,7 +24,7 @@ A pack is a directory, `content/packs/<id>/`:
 
 `tools/packs.ts` assembles these into a `Pack` (items and lessons sorted by id) and reports
 errors by file. `pnpm packs:build` writes one combined `pack.json` per pack for the web app.
-See `docs/adr/0004-one-file-per-item.md`.
+See `docs/adr/0006-one-file-per-item.md`.
 
 ## Rules that are enforced
 
