@@ -1,3 +1,4 @@
+export * from "./knowledge.js";
 export * from "./listenChoose.js";
 export * from "./rng.js";
 export * from "./select.js";
