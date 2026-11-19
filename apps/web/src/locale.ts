@@ -21,6 +21,13 @@ const en = {
   progress: "Exercise {current} of {total}",
   unreviewedNotice: "Preview content: not yet checked by a native speaker.",
   syntheticNotice: "Placeholder computer voice; a native speaker's recording will replace it.",
+  navLesson: "Lesson",
+  navStudio: "Studio",
+  navLabel: "Pages",
+  studioTitle: "Contributor studio",
+  studioPlaceholder: "Speakers will record and check content here. Nothing to do yet.",
+  notFound: "There is nothing at this address.",
+  backToLesson: "Back to the lesson",
 };
 
 export type Strings = typeof en;
@@ -42,6 +49,14 @@ const fr: Strings = {
   unreviewedNotice: "Contenu provisoire : pas encore vérifié par un locuteur natif.",
   syntheticNotice:
     "Voix de synthèse provisoire ; l’enregistrement d’un locuteur natif la remplacera.",
+  navLesson: "Leçon",
+  navStudio: "Studio",
+  navLabel: "Pages",
+  studioTitle: "Studio des contributeurs",
+  studioPlaceholder:
+    "Les locuteurs y enregistreront et vérifieront le contenu. Rien à faire pour l’instant.",
+  notFound: "Il n’y a rien à cette adresse.",
+  backToLesson: "Retour à la leçon",
 };
 
 export const LOCALES = {

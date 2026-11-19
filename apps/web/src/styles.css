@@ -127,6 +127,43 @@ button:focus-visible {
   font-weight: 600;
 }
 
+.nav {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 6px;
+}
+
+.nav__link {
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.nav__link[aria-current="page"] {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 600;
+  padding: 5px 13px;
+}
+
+.nav__link:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.page {
+  flex: 1;
+  padding: 8px 0 24px;
+}
+
+.page__title {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
 .lesson {
   flex: 1;
   display: flex;
@@ -292,6 +329,11 @@ button:focus-visible {
   padding: 12px 28px;
   font-weight: 600;
   font-size: 1.05rem;
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .button--wide {
