@@ -1,3 +1,14 @@
+## In plain words
+
+<!--
+For readers who are not programmers. Say what this does for a learner or a contributor, in
+everyday language: what changes, why it matters, and what a person would notice. Explain any
+technical term you cannot avoid. Say plainly what is not working yet, or not checked, and
+whether the owner has to decide or do anything. A few short paragraphs, no code.
+-->
+
+---
+
 Closes #
 
 ## What changed

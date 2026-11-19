@@ -54,6 +54,10 @@ See `docs/adr/0006-one-file-per-item.md`.
   tap gets covered by a browser test.
 - Bootstrap wording (`apps/web/src/locale.ts`) must be added in English and French together.
 - Record a decision that constrains future work as a short file in `docs/adr/`.
+- Every pull request description opens with an `## In plain words` section for readers who are
+  not programmers (what it does for a learner or contributor, any technical term explained, what
+  is not yet working or checked, and what the owner must decide), then a horizontal rule (`---`),
+  then the technical summary. Follow `.github/pull_request_template.md`.
 
 ## Done means
 
