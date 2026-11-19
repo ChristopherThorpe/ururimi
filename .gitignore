@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+!.env.example
+.vercel/
+
+# Generated from content/packs by `pnpm packs:build`
+apps/web/public/packs/
+
+# Test output
+apps/web/test-results/
+apps/web/playwright-report/
+coverage/
+
+# Python tooling
+__pycache__/
+.venv/
+tools/placeholder-audio/.cache/

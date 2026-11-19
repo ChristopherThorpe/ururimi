@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "id": "rn",
+  "language": {
+    "tag": "rn",
+    "autonym": "Ikirundi",
+    "names": {
+      "en": "Kirundi",
+      "fr": "kirundi"
+    }
+  },
+  "supportLocales": ["en", "fr"],
+  "items": [
+    {
+      "id": "rn.word.inzu",
+      "kind": "word",
+      "text": "inzu",
+      "glosses": {
+        "en": "house",
+        "fr": "maison"
+      },
+      "image": {
+        "file": "media/images/house.svg",
+        "provenance": {
+          "source": "Drawn for the Ururimi project",
+          "license": "CC-BY-4.0"
+        }
+      },
+      "audio": [
+        {
+          "kind": "synthetic",
+          "file": "media/audio/rn.word.inzu.tts.wav",
+          "voice": "facebook/mms-tts-run",
+          "provenance": {
+            "source": "Synthesised with Meta MMS-TTS by tools/placeholder-audio/generate.py; placeholder until a speaker records it",
+            "license": "CC-BY-NC-4.0",
+            "url": "https://huggingface.co/facebook/mms-tts-run"
+          }
+        }
+      ],
+      "provenance": {
+        "source": "Drafted with an AI assistant from general knowledge; awaiting review by a Kirundi speaker",
+        "license": "CC-BY-4.0"
+      },
+      "review": {
+        "status": "unreviewed"
+      }
+    },
+    {
+      "id": "rn.word.igiti",
+      "kind": "word",
+      "text": "igiti",
+      "glosses": {
+        "en": "tree",
+        "fr": "arbre"
+      },
+      "image": {
+        "file": "media/images/tree.svg",
+        "provenance": {
+          "source": "Drawn for the Ururimi project",
+          "license": "CC-BY-4.0"
+        }
+      },
+      "audio": [
+        {
+          "kind": "synthetic",
+          "file": "media/audio/rn.word.igiti.tts.wav",
+          "voice": "facebook/mms-tts-run",
+          "provenance": {
+            "source": "Synthesised with Meta MMS-TTS by tools/placeholder-audio/generate.py; placeholder until a speaker records it",
+            "license": "CC-BY-NC-4.0",
+            "url": "https://huggingface.co/facebook/mms-tts-run"
+          }
+        }
+      ],
+      "provenance": {
+        "source": "Drafted with an AI assistant from general knowledge; awaiting review by a Kirundi speaker",
+        "license": "CC-BY-4.0"
+      },
+      "review": {
+        "status": "unreviewed"
+      }
+    },
+    {
+      "id": "rn.word.izuba",
+      "kind": "word",
+      "text": "izuba",
+      "glosses": {
+        "en": "sun",
+        "fr": "soleil"
+      },
+      "image": {
+        "file": "media/images/sun.svg",
+        "provenance": {
+          "source": "Drawn for the Ururimi project",
+          "license": "CC-BY-4.0"
+        }
+      },
+      "audio": [
+        {
+          "kind": "synthetic",
+          "file": "media/audio/rn.word.izuba.tts.wav",
+          "voice": "facebook/mms-tts-run",
+          "provenance": {
+            "source": "Synthesised with Meta MMS-TTS by tools/placeholder-audio/generate.py; placeholder until a speaker records it",
+            "license": "CC-BY-NC-4.0",
+            "url": "https://huggingface.co/facebook/mms-tts-run"
+          }
+        }
+      ],
+      "provenance": {
+        "source": "Drafted with an AI assistant from general knowledge; awaiting review by a Kirundi speaker",
+        "license": "CC-BY-4.0"
+      },
+      "review": {
+        "status": "unreviewed"
+      }
+    },
+    {
+      "id": "rn.word.ifi",
+      "kind": "word",
+      "text": "ifi",
+      "glosses": {
+        "en": "fish",
+        "fr": "poisson"
+      },
+      "image": {
+        "file": "media/images/fish.svg",
+        "provenance": {
+          "source": "Drawn for the Ururimi project",
+          "license": "CC-BY-4.0"
+        }
+      },
+      "audio": [
+        {
+          "kind": "synthetic",
+          "file": "media/audio/rn.word.ifi.tts.wav",
+          "voice": "facebook/mms-tts-run",
+          "provenance": {
+            "source": "Synthesised with Meta MMS-TTS by tools/placeholder-audio/generate.py; placeholder until a speaker records it",
+            "license": "CC-BY-NC-4.0",
+            "url": "https://huggingface.co/facebook/mms-tts-run"
+          }
+        }
+      ],
+      "provenance": {
+        "source": "Drafted with an AI assistant from general knowledge; awaiting review by a Kirundi speaker",
+        "license": "CC-BY-4.0"
+      },
+      "review": {
+        "status": "unreviewed"
+      }
+    },
+    {
+      "id": "rn.word.igitabo",
+      "kind": "word",
+      "text": "igitabo",
+      "glosses": {
+        "en": "book",
+        "fr": "livre"
+      },
+      "image": {
+        "file": "media/images/book.svg",
+        "provenance": {
+          "source": "Drawn for the Ururimi project",
+          "license": "CC-BY-4.0"
+        }
+      },
+      "audio": [
+        {
+          "kind": "synthetic",
+          "file": "media/audio/rn.word.igitabo.tts.wav",
+          "voice": "facebook/mms-tts-run",
+          "provenance": {
+            "source": "Synthesised with Meta MMS-TTS by tools/placeholder-audio/generate.py; placeholder until a speaker records it",
+            "license": "CC-BY-NC-4.0",
+            "url": "https://huggingface.co/facebook/mms-tts-run"
+          }
+        }
+      ],
+      "provenance": {
+        "source": "Drafted with an AI assistant from general knowledge; awaiting review by a Kirundi speaker",
+        "license": "CC-BY-4.0"
+      },
+      "review": {
+        "status": "unreviewed"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "rn.lesson.first-words",
+      "exercise": "listen-choose",
+      "itemIds": [
+        "rn.word.inzu",
+        "rn.word.igiti",
+        "rn.word.izuba",
+        "rn.word.ifi",
+        "rn.word.igitabo"
+      ]
+    }
+  ]
+}
